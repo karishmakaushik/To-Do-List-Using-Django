@@ -1,0 +1,47 @@
+<html>
+<style>
+
+	body{
+		background-color: #1D8FB2;
+	}
+	p{
+		text-align:center;
+		font-size:28px;
+		font-family: "Comic Sans MS";
+	}
+
+	input[type=submit] {
+	border: 2px solid black;
+  	border-radius: 4px;
+	width: 10%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	background-color:#ccebff;
+    color: black;
+	}
+	.bt{
+		border: 2px solid black;
+  	border-radius: 4px;
+	width: 10%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	background-color:#ccebff;
+    color: black;
+	}
+	
+
+</style>
+<body>
+<p>Are you sure you want to delete "{{item}}"?</p>
+<button class='bt' onclick="window.location.href = "{% url 'main' %}";">Cancel</button>
+
+
+
+<form method="POST" action="">
+	{% csrf_token %}
+	<input type="submit" name="Confirm">
+</form>
+</body>
+</html>

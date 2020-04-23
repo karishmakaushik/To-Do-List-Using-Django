@@ -1,0 +1,42 @@
+<html>
+<style>
+	body{
+		background-color: #1D8FB2;
+	}
+	h3{
+		text-align:center;
+		font-size:48px;
+		font-family: "Comic Sans MS";
+	}
+	input[type=text] {
+	border: 2px solid black;
+  	border-radius: 4px;
+	width: 50%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	background-color: #ccebff;
+    color: black;
+	}
+	input[type=submit] {
+	border: 2px solid black;
+  	border-radius: 4px;
+	width: 10%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	background-color:#ccebff;
+    color: black;
+	}
+	
+</style>
+<h3>Update Task</h3>
+
+<form method="POST" action="">
+	{% csrf_token %}
+	{{form}}
+    <a style="text-decoration:none" href="{% url 'main' %}">
+	<input type="submit" name="Update Task">
+    </a>	
+</form>
+</html>

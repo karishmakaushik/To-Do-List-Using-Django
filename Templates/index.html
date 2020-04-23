@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+<title>ToDoList
+</title>
+<link rel="shortcut icon" href="{%static 'icon.ico'%}"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url({% static "img1.png" %});
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.centered {
+  position: absolute;
+  top: 33%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  color:#6F33FF;
+  text-shadow: 2px 2px 5px grey;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 36px;
+
+}
+.top-left {
+  position: absolute;
+  top: 15px;
+  left: 170px;
+  text-shadow: 2px 2px 5px grey;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 40px;
+  color:#12B658;
+  text-shadow: 4px 4px #6F33FF;
+
+}
+.bt{
+    position: absolute;
+    top: 55%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    color:#6F33FF;
+    text-shadow: 2px 2px 5px grey;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+.button {
+  background-color:#FF337A;
+  border: none;
+  color: #6F33FF;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+  margin-left: 100px;
+  margin-top:180px;
+  
+}
+.button1 {
+  background-color: white; 
+  color:#FF337A ; 
+  border: 2px solid #FF337A;
+}
+
+.button1:hover {
+  background-color:#6F33FF;
+  color: white;
+}
+.button2 {
+  background-color: white; 
+  color:#FF337A ; 
+  border: 2px solid #6F33FF;
+}
+
+.button2:hover {
+  background-color: #FF337A;
+  color: white;
+}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="top-left">To Do List......Welcome You.....</div>
+<div class="centered">
+<p>Prepare your Mind First....</p>
+<p>To Achive it..,to Earn it..</p>
+<p>And then put your heart,Mind &</p>
+<p>Soul into even your smallest acts...</p>
+</div>
+<div class='bt'>
+
+<a style="text-decoration:none" href="{% url 'register' %}">
+<button class="button button1">
+Signup
+</button>
+</a>
+
+<a style="text-decoration:none" href="{% url 'login' %}">
+<button class="button button2">
+Login
+</button>
+</a>
+
+</div>
+</body>
+</html>
